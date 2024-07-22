@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <section>
+        <div class="outer">
+
+
+          <div class="tabs">
+            <ul class="flex1">
+              <li class="showtab" data-tab="tab-1">Home</li>
+              <li data-tab="tab-2">About</li>
+              <li data-tab="tab-3">Contact</li>
+              <li data-tab="tab-4" >Services</li>
+            </ul>
+
+            <div class="data">
+                <div id="tab-1" class="datap showtab">
+                <h2>HOME</h2>
+                <p>
+                  You can read over our clinic policy. Patients should have
+                  received and signed a copy of the clinic policy when they
+                  first became patients at FCM. We may ask patients that don't
+                  have a clinic policy on file to sign a new one.
+                </p>
+            </div>
+              <div id="tab-2" class="datap">
+                <h2 >ABOUT</h2>
+                <p >
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                </p>
+              </div>
+              <div id="tab-3" class="datap">
+                <h2>CONTACT</h2>
+                <p >
+                  Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                </p>
+              </div>
+              <div id="tab-4" class="datap">
+                <h2>SERVICES</h2>
+                <p>
+                  The Data tab displays the actual data values for each variable. Many of the Data tab features are similar to the features that are found in spreadsheet applications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+<!-- JQuery -->
+ <script>
+
+        $(document).ready(function(){
+         
+          $(".flex1 li").click(function(){
+            var tab_id = $(this).attr('data-tab')
+            $(".flex1 li").removeClass("showtab")
+            $(".datap").removeClass("showtab")
+            $(this).addClass("showtab")
+            $("#"+tab_id).addClass("showtab")
+          })
+     
+
+        })
+ </script>
+
+  </body>
+</html>
